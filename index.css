@@ -1,0 +1,34 @@
+#WelcomeHud {color: red;}
+.Hudlist {font-size: large;}
+body {
+    background-color: #24252a;
+    color: white;
+}
+.HudName {
+    font-size: 30px;
+}
+header {
+    display: ruby;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0px 48px;
+}
+nav {
+    display: block;
+}
+.Hudlist {
+    display: flex;
+    list-style: none;
+}
+.Hudlist li a {
+    text-decoration: none;
+    color:lightgray;
+}
+.linka {
+    margin-left: 40px;
+    font-size: 20px;
+}
+div {
+}
