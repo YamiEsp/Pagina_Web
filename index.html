@@ -1,8 +1,8 @@
-<!-- App.svelte -->
 <script>
-  function showComment() {
-    const comment = document.getElementById('comment');
-    comment.style.display = 'block';
+  let selectedLanguage = "English";
+
+  function toggleLanguage() {
+    selectedLanguage = selectedLanguage === "English" ? "Spanish" : "English";
   }
 </script>
 
@@ -162,3 +162,16 @@
 <footer>
   <p>&copy; 2020-2024 André Pontón Sevilla's Hub. All rights reserved.</p>
 </footer>
+
+<section>
+  <h2>Curriculum Vitae</h2>
+  <p>Select language:</p>
+  <button on:click={toggleLanguage}>{selectedLanguage}</button>
+  {#if selectedLanguage === "English"}
+    <!-- English CV content -->
+    <p>English CV content goes here...</p>
+  {:else}
+    <!-- Spanish CV content -->
+    <p>Contenido del CV en español va aquí...</p>
+  {/if}
+</section>
