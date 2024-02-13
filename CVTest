@@ -1,0 +1,398 @@
+<!-- App.svelte -->
+<script>
+  let selectedLanguage = "English";
+
+  function toggleLanguage() {
+    selectedLanguage = selectedLanguage === "English" ? "Spanish" : "English";
+  }
+</script>
+
+<style>
+  /* Reset some default styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f2f2f2;
+    color: #333333;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .content .subheading {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .content .dates {
+    color: #888888;
+    font-style: italic;
+  }
+
+  .achievements ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .references p {
+    margin-bottom: 5px;
+  }
+
+  .languages ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .languages li {
+    margin-right: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .languages li {
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+<h1>Curriculum Vitae</h1>
+
+<!-- Language selection -->
+<select on:change={toggleLanguage}>
+  <option value="English">English</option>
+  <option value="Spanish">Spanish</option>
+</select>
+
+{#if selectedLanguage === "English"}
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        /* Styles are not being translated */
+        /* Los estilos no serán traducidos */
+    </style>
+</head>
+<body>
+    <h1>Curriculum Vitae</h1>
+
+    <div class="section">
+        <h2>Personal Information</h2>
+        <div class="content">
+            <p><span class="subheading">Full Name:</span> André Pontón Sevilla</p>
+            <p><span class="subheading">Address:</span> Redacted</p>
+            <p><span class="subheading">Phone:</span> 5532729202</p>
+            <p><span class="subheading">Email:</span> andreponton1@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Summary</h2>
+        <div class="content">
+            <!-- Your summary translated -->
+            <p>I am a technology enthusiast with solid experience as a Cloud Support Engineer at Amazon Web Services (AWS). My focus revolves around development and programming, merging my technical skills with operations management and team leadership. As a cloud services specialist, particularly in AWS, I have applied my expertise in crafting and optimizing advanced technical solutions. Committed to continuous growth and development in the field of computer science, especially in the realms of development and programming. My ability to communicate effectively, both with clients and colleagues in multidisciplinary teams, has been a key factor in my professional success.</p>
+        </div>
+    </div>
+
+
+  <div class="section">
+    <h2>Work Experience</h2>
+    <div class="content">
+        <p><span class="subheading">Amazon Web Service</span> - Cloud Support Engineer (<span class="dates">August 2022 - Present</span>)</p>
+        <ul>
+            <li>Responsible for providing technical support to AWS customers, resolving issues, and offering effective solutions.</li>
+            <li>Actively involved in analyzing and resolving complex incidents related to AWS cloud services.</li>
+            <li>Closely collaborated with multidisciplinary teams to ensure customer satisfaction and the delivery of optimal results.</li>
+            <li>Specialist in AWS cloud services, including EC2, S3, Connect, SNS, IoT, and more.</li>
+            <li>Managed and configured AWS cloud resources to optimize performance and efficiency.</li>
+            <li>Participated in identifying and applying best cloud security practices.</li>
+        </ul>
+
+            <p><span class="subheading">Coffee and Waffles House</span> - Gerente Junior (<span class="dates">Mayo 2021 - Mayo 2022</span>)</p>
+            <ul>
+                <li>Supervisión y coordinación de las operaciones diarias del establecimiento, incluyendo la gestión de personal y la atención al cliente.</li>
+                <li>Liderazgo en la implementación de estrategias para aumentar la satisfacción del cliente y optimizar los procesos internos.</li>
+                <li>Desarrollo y ejecución de programas de capacitación para el personal, enfocados en el cumplimiento de los estándares de calidad y servicio al cliente.</li>
+                <li>Colaboración con el equipo para mantener un ambiente de trabajo positivo y productivo.</li>
+                <li>Logro de mejoras en la eficiencia operativa, lo que resultó en un aumento de la rentabilidad del negocio.</li>
+                <li>Manejo de la planificación de horarios y la gestión de inventario para garantizar el flujo constante de productos y servicios de alta calidad.</li>
+            </ul>
+
+            <p><span class="subheading">Colegio Nuevo Continente Ciudad de México</span> - Maestro (<span class="dates">Enero 2019 - Marzo 2023</span>)</p>
+            <ul>
+                <li>Impartición de clases en el área de educación media superior.</li>
+                <li>Diseño y desarrollo de planes de estudio, materiales didácticos y evaluaciones.</li>
+                <li>Participación en actividades extracurriculares y eventos escolares.</li>
+                <li>Colaboración con otros miembros del cuerpo docente y la administración escolar para mejorar la calidad de la educación y el ambiente de aprendizaje.</li>
+            </ul>
+        </div>
+    </div>
+<div class="section">
+    <h2>Education</h2>
+    <div class="content">
+        <p><span class="subheading">National Polytechnic Institute Mexico City</span> - Computer Engineering and Specialization in Virtual Environments and Video Games (<span class="dates">Feb 2021 - Present</span>)</p>
+        <p><span class="subheading">Colegio Nuevo Continente Mexico City</span> - Upper Secondary Education (<span class="dates">August 2017 - June 2020</span>)</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Skills</h2>
+    <div class="content">
+        <ul>
+            <li><span class="subheading">Technical Support in Cloud Services (AWS):</span> Extensive experience in issue resolution and management of Amazon Web Services (AWS) cloud services. Capable of providing effective technical support to clients and resolving complex incidents.</li>
+            <li><span class="subheading">Problem Solving and Incident Analysis:</span> Ability to identify and effectively solve problems by analyzing situations and applying appropriate solutions in technical and operational environments.</li>
+            <li><span class="subheading">Operations Management and Team Leadership:</span> Experience in coordinating and supervising daily operations, including personnel management and process optimization. Demonstrated ability to lead teams towards common goals.</li>
+            <li><span class="subheading">Programming and Software Development:</span> Practical knowledge in programming and software development, with experience in C, C++, C#, Java, and Python.</li>
+            <li><span class="subheading">Effective Communication and Interpersonal Skills:</span> Ability to communicate ideas clearly and effectively, both in interacting with clients and collaborating with multidisciplinary teams.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Achievements and Recognitions</h2>
+    <div class="content">
+        <ul class="achievements">
+            <li>Diplomas from the Model United Nations during my High School years</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Languages</h2>
+    <div class="content languages">
+        <ul>
+            <li>Spanish: Native</li>
+            <li>English: C1</li>
+            <li>Japanese: N4</li>
+            <li>French: Beginner</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>References</h2>
+    <div class="content references">
+        <p>References available upon request.</p>
+    </div>
+</div>
+</body>
+</html>
+{:else}
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333333;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .section .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section .content .subheading {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .section .content .dates {
+            color: #888888;
+            font-style: italic;
+        }
+
+        .achievements ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .references p {
+            margin-bottom: 5px;
+        }
+
+        .languages ul {
+            margin: 0;
+            padding-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .languages li {
+            margin-right: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .languages li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Curriculum Vitae</h1>
+
+    <div class="section">
+        <h2>Información Personal</h2>
+        <div class="content">
+            <p><span class="subheading">Nombre completo:</span> André Pontón Sevilla</p>
+            <p><span class="subheading">Dirección:</span> Redactada</p>
+            <p><span class="subheading">Teléfono:</span> 5532729202</p>
+            <p><span class="subheading">Correo electrónico:</span> andreponton1@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Resumen</h2>
+        <div class="content">
+            <p>Soy un profesional apasionado de la tecnología con una sólida experiencia como Cloud Support Engineer en Amazon Web Services (AWS). Mi enfoque se centra en el desarrollo y la programación, combinando mis habilidades técnicas con la gestión de operaciones y el liderazgo de equipos. Como especialista en servicios en la nube, incluyendo AWS, he aplicado mis conocimientos en la creación y optimización de soluciones técnicas avanzadas. Estoy comprometido con el crecimiento y desarrollo continuo en el campo de la informática, especialmente en el ámbito del desarrollo y la programación. Mi capacidad para comunicar eficazmente, tanto con los clientes como con colegas de equipos multidisciplinarios, ha sido un factor clave en mi éxito profesional.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Experiencia Laboral</h2>
+        <div class="content">
+            <p><span class="subheading">Amazon Web Service</span> - Cloud Support Engineer (<span class="dates">Agosto 2022 - Actualidad</span>)</p>
+            <ul>
+                <li>Responsable de proporcionar soporte técnico a los clientes de AWS, resolviendo problemas y brindando soluciones efectivas.</li>
+                <li>Participación activa en el análisis y la resolución de incidencias complejas relacionadas con servicios en la nube de AWS.</li>
+                <li>Colaboración estrecha con equipos multidisciplinarios para garantizar la satisfacción del cliente y la entrega de resultados óptimos.</li>
+                <li>Especialista en servicios de la nube de AWS, incluyendo EC2, S3, Connect, SNS, IoT y más.</li>
+                <li>Gestión y configuración de recursos en la nube de AWS para optimizar el rendimiento y la eficiencia.</li>
+                <li>Participación en la identificación y aplicación de las mejores prácticas de seguridad en la nube.</li>
+            </ul>
+
+            <p><span class="subheading">Coffee and Waffles House</span> - Gerente Junior (<span class="dates">Mayo 2021 - Mayo 2022</span>)</p>
+            <ul>
+                <li>Supervisión y coordinación de las operaciones diarias del establecimiento, incluyendo la gestión de personal y la atención al cliente.</li>
+                <li>Liderazgo en la implementación de estrategias para aumentar la satisfacción del cliente y optimizar los procesos internos.</li>
+                <li>Desarrollo y ejecución de programas de capacitación para el personal, enfocados en el cumplimiento de los estándares de calidad y servicio al cliente.</li>
+                <li>Colaboración con el equipo para mantener un ambiente de trabajo positivo y productivo.</li>
+                <li>Logro de mejoras en la eficiencia operativa, lo que resultó en un aumento de la rentabilidad del negocio.</li>
+                <li>Manejo de la planificación de horarios y la gestión de inventario para garantizar el flujo constante de productos y servicios de alta calidad.</li>
+            </ul>
+
+            <p><span class="subheading">Colegio Nuevo Continente Ciudad de México</span> - Maestro (<span class="dates">Enero 2019 - Marzo 2023</span>)</p>
+            <ul>
+                <li>Impartición de clases en el área de educación media superior.</li>
+                <li>Diseño y desarrollo de planes de estudio, materiales didácticos y evaluaciones.</li>
+                <li>Participación en actividades extracurriculares y eventos escolares.</li>
+                <li>Colaboración con otros miembros del cuerpo docente y la administración escolar para mejorar la calidad de la educación y el ambiente de aprendizaje.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Educación</h2>
+        <div class="content">
+            <p><span class="subheading">Instituto Politécnico Nacional Ciudad de México</span> - Ingeniería en Informática y Especialización en Desarrollo de Ambientes Virtuales y Videojuegos(<span class="dates">Feb 2021 - Actualidad</span>)</p>
+            <p><span class="subheading">Colegio Nuevo Continente Ciudad de México</span> - Educación Media Superior (<span class="dates">Agosto 2017 - Junio 2020</span>)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Habilidades</h2>
+        <div class="content">
+            <ul>
+                <li><span class="subheading">Soporte Técnico en Servicios en la Nube (AWS):</span> Amplia experiencia en la resolución de problemas y la gestión de servicios en la nube de Amazon Web Services (AWS). Capaz de proporcionar soporte técnico eficaz a clientes y resolver incidencias complejas.</li>
+                <li><span class="subheading">Resolución de Problemas y Análisis de Incidencias:</span> Habilidad para identificar y resolver problemas de manera efectiva, analizando situaciones y aplicando soluciones adecuadas en entornos técnicos y operativos.</li>
+                <li><span class="subheading">Gestión de Operaciones y Liderazgo de Equipos:</span> Experiencia en la coordinación y supervisión de operaciones diarias, incluida la gestión de personal y la optimización de procesos. Habilidad demostrada en liderar equipos hacia el logro de objetivos comunes.</li>
+                <li><span class="subheading">Programación y Desarrollo de Software:</span> Conocimiento práctico en programación y desarrollo de software, con experiencia en C, C++, C#, Java y Python .</li>
+                <li><span class="subheading">Comunicación Efectiva y Habilidades Interpersonales:</span> Habilidad para comunicar ideas de manera clara y efectiva, tanto en la interacción con clientes como en la colaboración con equipos multidisciplinarios.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Logros y Reconocimientos</h2>
+        <div class="content">
+            <ul class="achievements">
+                <li>Diplomas del Modelo de las Naciones Unidas en mi Preparatoria</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Idiomas</h2>
+        <div class="content languages">
+            <ul>
+                <li>Español: Nativo</li>
+                <li>Inglés: C1</li>
+                <li>Japonés: N4</li>
+                <li>Francés: Principiante</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Referencias</h2>
+        <div class="content references">
+            <p>Referencias disponibles bajo solicitud.</p>
+        </div>
+    </div>
+</body>
+</html>
+{/if}
